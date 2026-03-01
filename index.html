@@ -108,6 +108,31 @@
             margin: 0 0 8px 0;
             font-size: 1.2rem;
         }
+        
+        /* 針對作品集標題連結的特殊設計 */
+        .portfolio-item h3 a {
+            color: var(--text-color); /* 讓標題保持原本的顏色，不變成預設的藍色 */
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .portfolio-item h3 a:hover {
+            color: var(--accent-color); /* 滑鼠游標移過去時變成強調色 */
+            text-decoration: none;
+        }
+
+        .portfolio-item h3 .link-arrow {
+            font-size: 0.9rem;
+            color: #888;
+            transition: transform 0.2s ease;
+        }
+
+        .portfolio-item h3 a:hover .link-arrow {
+            transform: translate(2px, -2px); /* 點擊特效：箭頭會往右上角微微移動 */
+            color: var(--accent-color);
+        }
 
         .contact-box {
             background-color: var(--card-bg);
@@ -148,14 +173,22 @@
                 <h2>Portfolio 作品清單</h2>
                 <div class="portfolio-grid">
                     <div class="portfolio-item">
-                        <h3>1. Fiilm</h3>
+                        <h3>
+                            <a href="https://apps.apple.com/tw/app/fiilm-%E5%85%8D%E8%B2%BB%E6%87%B7%E8%88%8A%E5%BA%95%E7%89%87%E9%A2%A8%E6%A0%BC/id6758689910" target="_blank" rel="noopener noreferrer">
+                                1. Fiilm <span class="link-arrow">↗</span>
+                            </a>
+                        </h3>
                         <div class="bilingual-text">
                             <span class="zh">專注於底片色彩模擬的 iOS 照片編輯 App。</span>
                             <span class="en">An iOS photo editing app specializing in film color simulation.</span>
                         </div>
                     </div>
                     <div class="portfolio-item">
-                        <h3>2. 法拍日報 (Foreclosure Daily)</h3>
+                        <h3>
+                            <a href="https://apps.apple.com/tw/app/%E6%B3%95%E6%8B%8D%E6%97%A5%E5%A0%B1/id6759454431" target="_blank" rel="noopener noreferrer">
+                                2. 法拍日報 (Foreclosure Daily) <span class="link-arrow">↗</span>
+                            </a>
+                        </h3>
                         <div class="bilingual-text">
                             <span class="zh">每日提供最新法拍資訊的應用程式。</span>
                             <span class="en">An app providing daily updates on foreclosure information.</span>
