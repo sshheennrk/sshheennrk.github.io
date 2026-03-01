@@ -3,10 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fiilm</title>
+    <title>Bruce | Indie Developer</title>
+    <style>
+        :root {
+            --bg-color: #fafafa;
+            --text-color: #1a1a1a;
+            --accent-color: #007aff;
+            --card-bg: #ffffff;
+            --border-color: #e5e5e5;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --text-color: #e0e0e0;
+                --accent-color: #0a84ff;
+                --card-bg: #1e1e1e;
+                --border-color: #333333;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            padding: 40px 20px;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #888;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .bilingual-text {
+            margin-bottom: 15px;
+        }
+
+        .bilingual-text .zh {
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .bilingual-text .en {
+            font-size: 0.95em;
+            color: #777;
+            display: block;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .portfolio-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .portfolio-item h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+        }
+
+        .contact-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Fiilm</h1>
-    <p>Film filter app for iOS.</p>
+    <div class="container">
+        <header>
+            <h1>Bruce</h1>
+            <p class="subtitle">Indie Developer</p>
+        </header>
+
+        <main>
+            <section class="section">
+                <h2>About Me 關於我</h2>
+                <div class="bilingual-text">
+                    <span class="zh">我是一個採用 "Vibe Coding" 開發的個人開發者，專注於打造實用且具設計感的應用程式。</span>
+                    <span class="en">I'm an indie developer embracing "vibe coding," focused on building practical and well-designed applications.</span>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Portfolio 作品清單</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <h3>1. Fiilm</h3>
+                        <div class="bilingual-text">
+                            <span class="zh">專注於底片色彩模擬的 iOS 照片編輯 App。</span>
+                            <span class="en">An iOS photo editing app specializing in film color simulation.</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <h3>2. 法拍日報 (Foreclosure Daily)</h3>
+                        <div class="bilingual-text">
+                            <span class="zh">每日提供最新法拍資訊的應用程式。</span>
+                            <span class="en">An app providing daily updates on foreclosure information.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Contact & Support 聯絡與支援</h2>
+                <div class="bilingual-text">
+                    <span class="zh">如果有任何網站或 App 開發需求，歡迎與我聯繫。</span>
+                    <span class="en">Feel free to contact me for any website or app development requests.</span>
+                </div>
+                
+                <div class="contact-box">
+                    <div class="bilingual-text">
+                        <span class="zh">🛠️ <strong>Bug 回報與建議：</strong><br>若在使用我的 App 時遇到任何問題或有功能建議，歡迎來信至 <a href="mailto:hii.canihelp@gmail.com">hii.canihelp@gmail.com</a>。<br>（為了幫助我更快解決問題，來信請務必附上相關截圖！）</span>
+                        <br>
+                        <span class="en">🛠️ <strong>Bug Reports & Suggestions:</strong><br>If you encounter any bugs or have suggestions, please email me at <a href="mailto:hii.canihelp@gmail.com">hii.canihelp@gmail.com</a>.<br>(Please attach screenshots so I can troubleshoot efficiently!)</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
